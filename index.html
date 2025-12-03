@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #000;
+        color: #fff;
+        font-family: system-ui, sans-serif;
+        overflow: hidden;
+    }
+    body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    body::-webkit-scrollbar { display: none; }
+
+    header {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 60px;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        pointer-events: none;
+        z-index: 10;
+    }
+    .title {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        pointer-events: auto;
+    }
+    .title-center { position: absolute; left: 50%; transform: translateX(-50%); }
+    .title-right  { margin-left: auto; }
+
+    .left-col, .center-col, .right-col {
+        position: absolute;
+        top: 80px;
+        padding: 0 40px;
+    }
+    .left-col   { left: 0; }
+    .center-col { left: 50%; transform: translateX(-50%); text-align: center; }
+    .right-col  { right: 0; text-align: right; }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .center-col .list { align-items: center; }
+    .right-col  .list { align-items: flex-end; }
+
+    .item, .video-link, .shop-link {
+        white-space: nowrap;
+    }
+    a {
+        color: #0ff;
+        text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    @media (max-width: 1100px) {
+        .left-col, .center-col, .right-col {
+            position: static;
+            transform: none;
+            padding: 0 30px;
+            text-align: center !important;
+            align-items: center !important;
+        }
+        .center-col, .right-col { margin-top: 60px; }
+        .title-center, .title-right { position: static; transform: none; }
+        .title-right { margin-left: 0; }
+        .item, .video-link, .shop-link { white-space: normal; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="title">What We Do</div>
+    <div class="title title-center">Explanation</div>
+    <div class="title title-right">Ecosystem</div> <!-- Title unchanged -->
+</header>
+
+<!-- Left: Projects -->
+<div class="left-col">
+    <div class="list">
+        <div class="item">Centralized and Automated Governance</div>
+        <div class="item">On-Demand Remote Computing</div>
+    </div>
+</div>
+
+<!-- Center: Videos -->
+<div class="center-col">
+    <div class="list">
+        <div class="video-link"><a href="#" target="_blank">Visit Video 1</a></div>
+        <div class="video-link"><a href="#" target="_blank">Visit Video 2</a></div>
+    </div>
+</div>
+
+<!-- Right: Shop links (one per project) -->
+<div class="right-col">
+    <div class="list">
+        <div class="shop-link"><a href="#" target="_blank">Shop →</a></div>
+        <div class="shop-link"><a href="#" target="_blank">Shop →</a></div>
+    </div>
+</div>
+
+</body>
+</html>
