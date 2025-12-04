@@ -11,7 +11,7 @@
         padding: 0;
         height: 100%;
         background: #000;
-        color: #fff;
+        color: #fff;               /* pure white text only */
         font-family: system-ui, sans-serif;
         overflow: hidden;
     }
@@ -61,14 +61,15 @@
     .center-col .list { align-items: center; }
     .right-col  .list { align-items: flex-end; }
 
-    .item, .video-link, .shop-link {
-        white-space: nowrap;
-    }
+    .item, .video-link, .shop-link { white-space: nowrap; }
+
     a {
-        color: #0ff;
+        color: #fff;               /* pure white links */
         text-decoration: none;
     }
-    a:hover { text-decoration: underline; }
+    a:hover {
+        text-decoration: underline;
+    }
 
     @media (max-width: 1100px) {
         .left-col, .center-col, .right-col {
@@ -90,7 +91,7 @@
 <header>
     <div class="title">What We Do</div>
     <div class="title title-center">Explanation</div>
-    <div class="title title-right">Ecosystem</div> <!-- Title unchanged -->
+    <div class="title title-right">Ecosystem</div>
 </header>
 
 <!-- Left: Projects -->
@@ -109,7 +110,7 @@
     </div>
 </div>
 
-<!-- Right: Shop links (one per project) -->
+<!-- Right: Shop links -->
 <div class="right-col">
     <div class="list">
         <div class="shop-link"><a href="#" target="_blank">Shop →</a></div>
