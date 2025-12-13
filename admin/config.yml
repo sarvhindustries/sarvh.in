@@ -1,21 +1,3 @@
-backend:
-  name: github
-  repo: "sarvhindustries/sarvh.in" # <-- owner/repo
-  branch: "main"
-  open_authoring: false
-  client_id: "GITHUB_OAUTH_CLIENT_ID" # <-- replace with your GitHub OAuth App Client ID
-
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
-
-publish_mode: editorial_workflow # create PRs for changes (safer)
-
-collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "index.html"
-        label: "Home page (raw HTML)"
-        name: "home"
-        fields:
-          - { label: "Raw HTML", name: "body", widget: "code", modes: ["html"] }
+# DEPRECATED: This repository is using a GitHub-only admin page that links to GitHub's web editor.
+# The previous Netlify CMS configuration is intentionally disabled to avoid external dependencies.
+# If you later want to re-enable a JS-based in-browser CMS, replace this file with a valid config.
